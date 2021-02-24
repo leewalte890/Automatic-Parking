@@ -1,0 +1,16 @@
+digraph G {
+"base_footprint" -> "base_link"[label="Broadcaster: /node_publish_tf\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 134.027 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "base_footprint"[label="Broadcaster: /gazebo\nAverage rate: 30.354 Hz\nMost recent transform: 134.001 ( 0.026 sec old)\nBuffer length: 2.965 sec\n"];
+"base_link" -> "camera_link"[label="Broadcaster: /node_publish_tf\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 134.027 sec old)\nBuffer length: 0.000 sec\n"];
+"camera_link" -> "camera_rgb_frame"[label="Broadcaster: /node_publish_tf\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 134.027 sec old)\nBuffer length: 0.000 sec\n"];
+"camera_rgb_frame" -> "camera_rgb_optical_frame"[label="Broadcaster: /node_publish_tf\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 134.027 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "caster_back_link"[label="Broadcaster: /node_publish_tf\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 134.027 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "imu_link"[label="Broadcaster: /node_publish_tf\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 134.027 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "base_scan"[label="Broadcaster: /node_publish_tf\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 134.027 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "wheel_left_link"[label="Broadcaster: /node_publish_tf\nAverage rate: 30.354 Hz\nMost recent transform: 134.001 ( 0.026 sec old)\nBuffer length: 2.965 sec\n"];
+"base_link" -> "wheel_right_link"[label="Broadcaster: /node_publish_tf\nAverage rate: 30.354 Hz\nMost recent transform: 134.001 ( 0.026 sec old)\nBuffer length: 2.965 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 134.027"[ shape=plaintext ] ;
+ }->"odom";
+}

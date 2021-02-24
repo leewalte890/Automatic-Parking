@@ -1,0 +1,9 @@
+<launch>
+
+  <node pkg="walter_lee" type="laneDetect.py" name="laneDetect"  />
+
+  <node pkg="walter_lee" type="pursuit.py" name="pursuit"  />
+
+  <node pkg="walter_lee" type="cloudScan.py" name="cloudScan"  />
+
+</launch>

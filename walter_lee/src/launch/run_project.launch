@@ -1,0 +1,24 @@
+<launch>
+
+
+  <include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch">
+    <arg name="slam_methods" value="gmapping"/>  
+    <arg name="open_rviz" value="false"/>    
+  </include>
+  
+  <include file="$(find turtlebot3_navigation)/launch/move_base.launch">
+  </include>
+
+  <node pkg="walter_lee" type="laneDetect.py" name="laneDetect"  />
+
+  <node pkg="walter_lee" type="pursuit.py" name="pursuit"  />
+
+  <node pkg="walter_lee" type="cloudScan.py" name="cloudScan"  />
+
+  <node pkg="walter_lee" type="waypoints_follow.py" name="waypoints"  />
+
+  <node pkg="walter_lee" type="avoidObs.py" name="avoidObs"  />
+
+  <node pkg="walter_lee" type="parking.py" name="parking"  />
+
+</launch>
